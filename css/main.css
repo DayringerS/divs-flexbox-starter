@@ -97,40 +97,97 @@ textarea {
 
 
 html {
-  background-color: #666;
-  height: 100%;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+  }
+  
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0 2em;
+    font-size: 1.25em;
+    height: 100%;
+    color: #fff;
+  }
+  
+header {
+    background-color: #222;
+    font-size: 2.5em;
+    height: 80px;
+    width: 100%;
+    font-family: 'Lora', sans-serif;
+    padding: 0 1.125em;
+    line-height: 1.4em;
+    font-style: italic;
+    background: url(../img/bkgd.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
 }
 
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
-  font-size: 1.25em;
-  height: 100%;
+footer {
+    background-color: #222;
+    font-size: 1em;
+    height: 80px;
+    width: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0 1.25em;
+    text-align:center;
+    font-style: italic;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+  }
+  
+main {
+    background-color: #ccc;
+    height: 300px;
+    width: 100%;
+    color: #434343;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 1.25em;
+    line-height: 1.4em;
+    border-radius: 10px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+
+header,
+footer,
+main {
+
 }
 
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
-  font-weight: 700;
+  font-weight: 250;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+
 }
 
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   color: #434343;
-  line-height: 1.5em;
+  line-height: 1.3em;
   font-size: 1em;
   background-color: #fff;
-  border-style: solid;
-  padding: 1em;
-  height: 300px;
+  height: 200px;
   width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align:center
-}
-
+  border:solid;
+  border-color: rgb(121, 120, 120);
+  border-width: thin;
+  padding: 0 1em;
 
 
 
@@ -213,7 +270,23 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media all and (max-width: 768px) {
+    body {
+      padding: 1em;
+    }
+}
+@media (min-width: 1200px) {
+    .flex-items {
+      flex-basis: 30%;
+      border-bottom: none;
+    }
 
+    #div-2 p {
+      border-left: 1px solid #555;
+      border-right: 1px solid #555;
+      padding: 0 40px;
+    }
+}
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),
